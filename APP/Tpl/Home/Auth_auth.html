@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="http://code.jquery.com/jquery-1.11.2.js"></script>
+<title>授权登陆</title>
+<script type="text/javascript">
+(function() {
+    WgateJs = {};
+    WgateJs.auto_auth=true;
+    WgateJs.gate_options={force:1,info:"force"};
+    WgateJs.ready=function(){
+      var wgateid=WgateJs.getWgateid();
+      WgateJs.getWgateUser(function(user)
+    		  {
+    	  $.ajax({
+    		  url:"/Auth/addUser",
+    		  type:"post",
+    		  dataType:"json",
+    		  data:{"openid":wgateid,"nickname":user.nickname,"sex":user.sex,"city":user.city,"headimgurl":user.headimgurl},
+    		  success:function(data)
+    		  {
+    			  if(data.info=="ok")
+    				  {
+    				  var url=$("#url").val();
+    				  window.location.href="http://dfq.chufangke.cn"+url;
+    				  }
+    			  else{
+    				  alert("授权失败");
+    			  }
+    		  }
+    	  });
+    	  });
+    }
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://st.weixingate.com/";
+    u=u+'st/886';
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+    g.defer=true; g.async=true; g.src=u; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+</head>
+<body>
+<input type="hidden" value="{$url}" id="url">
+</body>
+</html>

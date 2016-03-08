@@ -1,0 +1,77 @@
+@charset "utf-8";
+/* 自定义CSS，全部以z-xxx 格式 */
+.z-header{ height:50px; background:#323436; z-index: 100; position: fixed;}
+.z-left{background:#f3f3f3; border-right:solid 1px #ddd; min-height:900px; position: fixed; height: 100px; width: 14%;}
+.z-right{background:#FFF; min-height:900px; margin-left: 14%; width: 86%;}
+*{ font-family: '微软雅黑'!important}
+
+/*头部*/
+.z-header .z-h-logo,.z-header .z-h-nav{ height:100%;}
+.z-header .z-h-nav{ top:20px;}
+.z-header .z-h-nav ul{ border-bottom:none;}
+.z-header .z-h-nav ul li a{ color:#FFF; padding:5px 20px;}
+.z-header .z-h-nav ul li.active a{ color:#282828;}
+.z-header .z-h-nav ul li a:hover{ color:#666;}
+
+/*登录*/
+.login{ background:url(/Public/Admin/Images/p1_bg.jpg) no-repeat;}
+.loginbox{ width:440px; height:380px; margin:200px auto; background:#FFF; border-radius:3px; position:relative;}
+.loginbox h1{ text-align:center; padding-top:40px; margin-bottom:50px; font-size: 28px;}
+.loginbox .label{ width:340px; margin:20px 50px;}
+.loginbox .label input{ border:1px solid #CCC; border-radius:3px; height:45px; text-indent:10px; width:100%;}
+.loginbox .label input[type=submit]{ background:#6BC30D; color:#FFF; text-align:center; border:none; border-radius:3px; font-size:16px;}
+
+.z-h-admin{margin-top: 18px; width: 15%; text-align: right;}
+.z-h-admin img{ display: none;}
+.z-h-admin a{color:#ccc!important}
+
+/*左边导航区域*/
+.z-left ul{ margin-top: 50px;}
+.z-left ul li{ height:40px; line-height:40px; text-indent: 5px;}
+.z-left ul li.active a{color:#6BC30D;}
+.z-left ul li a{height:40px; display:inline-block;}
+
+/*右边区域*/
+.main-info .box{ width:80%; margin:10%; line-height:40px; height:80px; text-align:center; background:#CCC; border-radius:5px;}
+.z-right .head{}
+
+/*幻灯片*/
+.z-right .img-run{ margin-top:10px;}
+.input_clear{ float:left; margin-right:10px;}
+.head{ margin-bottom:20px; margin-top:20px; height: 40px; width:96%; margin-left:2%;}
+
+/*表单*/
+.form-title{ text-align: right; min-width: 100px; line-height: 30px; height: 40px;}
+.form-p{ margin-bottom: 20px;}
+.form-p .field .input-help{ color:red}
+.file-img{ background: #ccc; width:400px; height: 200px; margin-bottom: 10px; display: inline-block;}
+.file-img img{width:400px; height: 200px; margin-bottom: 10px;}
+.file-img input[type=file]{position:absolute; top:0px; filter:alpha(opacity:0);opacity: 0; width:100%; height: 100%;}
+
+.file-img2{ background: #ccc; width:200px; height: 200px; margin-bottom: 10px; display: inline-block;}
+.file-img2 img{width:200px; height: 200px; margin-bottom: 10px;}
+.file-img2 input[type=file]{position:absolute; top:0px; filter:alpha(opacity:0);opacity: 0; width:100%; height: 100%;}
+/*颜色*/
+.f-red{ color:red!important}
+
+.w98{ width: 96%; margin-left: 2%;}
+.checkboxfield label{ margin-right: 20px;}
+tr.current th{ text-align: center;}
+
+.tab .tab-nav .active{font-weight: bold; }
+
+span.w100{ width: 100px; display: inline-block; text-align: right; margin-right: 10px; color:#e1a04b;}
+td.colspanTd{text-align: left; display: none;}
+
+@media (min-width: 760px){
+	.nav-tabs.nav-inline .active a {
+		border-bottom: none;
+		background: #fff;
+		margin-bottom: -1px;
+		padding: 4px 5px 5px 5px;
+	}
+	.z-header .z-h-nav ul li a {
+		color: #FFF;
+		padding: 5px 15px;
+	}
+}

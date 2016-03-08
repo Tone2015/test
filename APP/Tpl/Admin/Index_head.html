@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>信息管理</title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Admin/lib/pintuer/pintuer.css">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Admin/Css/style.css">
+<script src="__JS__/jquery-1.8.3.min.js"></script>
+<script src="__PUBLIC__/Admin/lib/pintuer/pintuer.js"></script>
+</head>
+
+<body>
+<!--header-->
+<div class="x12 z-header">
+	<div class="x2 z-h-logo" style="color:#6BC30D; font-size: 24px; text-align: center;; line-height: 50px;">达芬奇后台系统</div>
+    <div class="x8 z-h-nav">
+    	
+    </div>
+    <div class="x2 z-h-admin"><img alt="" src="{$_SESSION['ADMININFO'][0].icon}"  style="border: 2px solid #ededed; border-radius: 80px;height:40px;;width: 40px; margin-top: 5px;"> 
+    <a href="javascript:void(0)" style="font-size:14px; font-family:‘黑体’; color:#fff;">当前用户：{$_SESSION['ADMININFO'][0].name} </a>
+    <a href="/Admin/Login/adminexit" style="margin-left: 20px; color:#fff;">安全退出</a>
+   </div>
+</div>
+
+<div class="x12" style="height: 50px;"></div>
